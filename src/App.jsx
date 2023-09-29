@@ -13,7 +13,7 @@ const App = () => {
 ])
   const [edits , setEdits] = useState("");
   const [editValue , setEditValue] = useState("");
-  const [editData , setEditData] = useState([]);
+  // const [editData , setEditData] = useState([]);
   const [index , setIndex] = useState();
 
 
