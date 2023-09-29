@@ -82,7 +82,7 @@ const App = () => {
 
     {/* Task Container */}
         
-        <div className="container" >
+        {/* <div className="container" >
 
             {listData!=[] && listData.map((data, i)=>{
               return(
@@ -98,7 +98,21 @@ const App = () => {
                 </>
               )
             })}
-            </div>  
+            </div>   */}
+
+            <div className="container">
+  {listData.map((data, i) => (
+    <div className="card" key={i}>
+      <h1 className='title'>{data}</h1>
+      <p className='des'>{data}</p>
+      <div className="card-btn">
+        <button className='c-btn' onClick={() => edit(i)}>Edit</button>
+        <button className='c-btn' onClick={() => remove(i)}>Remove</button>
+      </div>
+    </div>
+  ))}
+</div>
+
         
         {/* edit */}
         <div  className={`form-container ${edits}`}>
